@@ -75,7 +75,7 @@ let functionGenerator = (functionName) => {
     switch(functionName){
         case "addition" : return ["",addition]
         case "subtraction" : return ["", subtraction]
-        default : return ["Invalid",null]
+        default : return function(){return "Invalid Input"}
     }
 }
 
@@ -97,5 +97,43 @@ add(10,4)
 let [msg1,sub] = functionGenerator("subtraction")
 sub(10,4)
 
+/*const myObj = {
+    fname: 'sid',
+    lanme: 'gggg',
+    xyz: function (a, b) {
+        return a + b
+    }(2, 3),
 
+    abc: (a, b) => { return (a + b) },
+    mno: function (a, b) {
+        return (function (a,b) {
+            return a*b
+        }
+        )(a,b)
+    }(2, 3)
+
+
+}
+console.log(myObj.mno);*/
+
+// let myObj1 = {
+//     fname: 'ram',
+//     lanme: 'sita'
+// }
+
+// let myObj2 = {
+//     fname: 'ramesh',
+//     lanme: 'suresh'
+// }
+
+// console.log("myobj1 :", myObj1);
+// console.log("myobj2 :", myObj2);
+
+// let temp = myObj1
+// myObj1 = myObj2
+// myObj2 = temp
+
+// console.log("After Swapping");
+// console.log("Myobj1 : ", myObj1);
+// console.log("Myobj2 : ", myObj2);
 
