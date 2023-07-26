@@ -1,6 +1,7 @@
 class Student {
 
     constructor(rollNo, marks, fName, lName, date) {
+
         this.roll = rollNo
         this.marks = marks
         this.fName = fName
@@ -34,9 +35,9 @@ class Student {
 
         this.finalgrade = function () {
             let finalGrade
-            if (this.avgMarks() >= 80 && this.avgMarks() <= 90) {
+            if (this.avgMarks() >= 80 &&  this.avgMarks() <= 90) {
                 finalGrade = "A"
-            } else if (this.avgMarks() >= 70 && this.avgMarks() <= 60) {
+            } else if (this.avgMarks() >= 70 || this.avgMarks() <= 60) {
                 finalGrade = "B"
             } else {
                 finalGrade = "C"
@@ -57,37 +58,23 @@ class Student {
             return birth.getDate() + '/' + birth.getMonth() + '/' + birth.getFullYear()
         }
 
-        // this.dob = function () {
-        //     var birth = new Date(this.date)
-        //     return birth.getDate() + '/' + birth.getMonth() + '/' + birth.getFullYear()
-        // }
-
-        // this.age = function(){
-        //     let age = 
-        // }
     }
-
-    // getDOB(){
-    //     return this.dob
-    // }
 
 
     getFullName() {
         return this.fName + " " + this.lName
     }
 
-    // getAvgMarks() {
-    //     return this.avgMarks
-    // }
 }
 
-let s1 = new Student(1, [90, 70, 50], "Siddhant", "Gunjal", "14/05/2001")
-console.log("S1 : ", s1.getFullName());
-console.log("S1 : ", s1.avgMarks());
-console.log("S1 : ", s1.grade());
-console.log("S1 : ", s1.finalgrade());
-console.log(s1.dob());
-console.log(s1.age());
+let s1 = new Student(1, [90, 90, 60], "Siddhant", "Gunjal", "12/12/2001")
+console.log("S1 Full Name : ", s1.getFullName());
+console.log("S1 Marks : ", s1.marks);
+console.log("S1  Average Marks : ", s1.avgMarks());
+console.log("S1 Grades :  ", s1.grade());
+console.log("S1 Final Grade :  ", s1.finalgrade());
+console.log("S1 Date of Birth : ", s1.dob());
+console.log("S1 Age : ", s1.age());
 
 
 
