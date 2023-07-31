@@ -69,10 +69,5 @@ class Game{
 
     }
 
-    resetGame(){
-        this.board = new Board();
-        this.turn = 0
-        this.isGameEnded = false;
-    }
 }
 module.exports = Game
