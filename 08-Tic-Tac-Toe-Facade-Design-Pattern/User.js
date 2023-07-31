@@ -10,5 +10,3 @@ console.log(g2.play(7));
 console.log(g1.play(1));
 console.log(g2.play(5));
 
-g1.resetGame();
-console.log("Game Restted");
